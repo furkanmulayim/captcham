@@ -1,0 +1,54 @@
+//hocam böyle bi fonksiyon oluşturdum fakat paylaştığınız pi kodunu çözemediğim için yarım kaldı dün captchayı bitirmiştim normalde
+
+
+// bu adımdan sonra eğer  stringe atsaydım; random olarak oluşturulan değeri parametre olarak gönderip stringin index of metoduyla kaçıncı basamakta olduğunu bulabilecektim.
+      
+    String uretilen_kod = "";
+    int uretilen_kod_int;
+    String birinci_cift, ikinci_cift, ucuncu_cift;
+
+  for (int i = 0; i < 2; i++) {
+            int a = random.nextInt(32);
+            if (a < 10) {
+                if (i == 1) {
+                    birinci_cift = "" + 0;
+                    break;
+                } else if (i == 0) {
+                    birinci_cift = "" + 0 + a;
+                    break;
+                }
+            }
+            birinci_cift = "" + a;
+            break;
+        }
+        for (int i = 0; i < 2; i++) {
+            int a = random.nextInt(12);
+            if (a < 10) {
+                if (i == 1) {
+                    ikinci_cift = "" + 0;
+                    break;
+                } else if (i == 0) {
+                    ikinci_cift = "" + 0 + a;
+                    break;
+                }
+            }
+            ikinci_cift = "" + a;
+            break;
+        }
+        for (int i = 0; i < 2; i++) {
+            int a = random.nextInt(99);
+            if (a < 10) {
+                if (i == 1) {
+                    ucuncu_cift = "" + 0;
+                    break;
+                } else if (i == 0) {
+                    ucuncu_cift = "" + 0 + a;
+                    break;
+                }
+            }
+            ucuncu_cift = "" + a;
+            break;
+        }
+        uretilen_kod = "" + birinci_cift + ikinci_cift + ucuncu_cift;
+
+        uretilen_kod_int = Integer.valueOf(uretilen_kod);
